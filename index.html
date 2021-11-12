@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>Hand Guesters App</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body style="font-family: cursive;background-color: khaki;">
+<div class="container">
+<center>
+    <br>
+<label class="btn btn-danger" style="height: 80px; font-size: 25px; letter-spacing: 20px; border-radius: 10px; font-weight: bolder; color:white" >
+GESTURE WEB APP
+<br>
+<span>&#129304;</span>
+<span>&#128076;</span>
+<span>&#9996;</span>
+<span>&#128077;</span>
+<span>	
+    &#128400;</span>
+</label>
+<br><br>
+
+<p style="font-size: 22px; font-weight: bolder;">Take a selfie of a gesture to know about its meaning
+    <br>
+    <br>
+  <h4 style="font-weight: bolder;">On the following gestures  the model is trained - 
+  </h4>
+  <h1>
+  <span>&#9996;</span>
+  <span>│</span>
+  <span>&#128077;</span>
+  <span>│</span>
+  <span>&#128076;</span>
+  </h1>
+  <br>
+  <br>
+  <br>
+</p>
+
+<div class="col-md-4 col-sm-12 col-xs-12">
+    <h3 style="font-weight: bolder;">Webcam view - </h3>
+  <div id="camera"></div>
+<br>
+<button onclick="take_snapshot()"><img src="https://apprecs.org/gp/images/app-icons/300/b7/com.nll.screenrecorder.jpg" style="height: 50px; width: 50px;"></button>
+</div>
+<div class="col-md-4 col-sm-12 col-xs-12" id="predictiondiv" >
+<h3 style="font-weight: bolder; color: black;" class="btn btn-info">Prediction - </h3>
+<p class="gesture_name" id="result1"></p>
+<p class="gesture" id="gesture1"></p>
+</div>
+<div class="col-md-4 col-sm-12 col-xs-12">
+<h3 style="font-weight: bolder;">Recent Picture - </h3>
+<div id="result"></div>
+<br>
+<button onclick="show_result()" class="btn btn-success">Predict Emotion</button>
+
+</div>
+
+</center>
+<script src="main.js"></script>
+</div>
+</body>
+</html>
